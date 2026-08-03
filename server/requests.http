@@ -1,0 +1,48 @@
+@baseUrl = http://localhost:5000/api
+
+### Estado de la API
+GET http://localhost:5000/api/health
+
+### Listar productos
+GET {{baseUrl}}/products
+
+### Buscar por título o artista
+GET {{baseUrl}}/products?search=midnight
+
+### Crear producto sin portada
+POST {{baseUrl}}/products
+Content-Type: multipart/form-data; boundary=GrooveShelfBoundary
+
+--GrooveShelfBoundary
+Content-Disposition: form-data; name="title"
+
+Disco de prueba
+--GrooveShelfBoundary
+Content-Disposition: form-data; name="artist"
+
+Artista de prueba
+--GrooveShelfBoundary
+Content-Disposition: form-data; name="genre"
+
+Rock
+--GrooveShelfBoundary
+Content-Disposition: form-data; name="format"
+
+Vinilo
+--GrooveShelfBoundary
+Content-Disposition: form-data; name="year"
+
+2026
+--GrooveShelfBoundary
+Content-Disposition: form-data; name="price"
+
+19990
+--GrooveShelfBoundary
+Content-Disposition: form-data; name="stock"
+
+5
+--GrooveShelfBoundary
+Content-Disposition: form-data; name="description"
+
+Producto creado desde el archivo requests.http.
+--GrooveShelfBoundary--

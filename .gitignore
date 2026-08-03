@@ -1,0 +1,26 @@
+# Dependencias
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Variables de entorno
+.env
+server/.env
+client/.env
+
+# Builds
+client/dist/
+
+# Imágenes subidas (se conserva la carpeta)
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Sistema y editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*

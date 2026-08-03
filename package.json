@@ -1,0 +1,13 @@
+{
+  "name": "mini-tienda-discos-mern",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mini tienda MERN de discos con CRUD, carrito, checkout y subida de imágenes.",
+  "scripts": {
+    "setup": "npm install --prefix server && npm install --prefix client && node scripts/create-env.js",
+    "dev": "node scripts/dev.js",
+    "seed": "npm run seed --prefix server",
+    "build": "npm run build --prefix client",
+    "start": "npm run start --prefix server"
+  }
+}
